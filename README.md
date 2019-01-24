@@ -21,6 +21,12 @@ connected (press CTRL+C to quit)
 < are you a happy parrot?
 ```
 
+## Chain Commands
+
+```
+wscat -c wss://wsqs-e-barchart.aws.barchart.com/jerq -x "login user:pass" -x "ver 4" -x "go ZCBG19NCSC.CM"
+```
+
 ## License
 
 MIT
