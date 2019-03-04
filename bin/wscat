@@ -248,7 +248,7 @@ if (program.listen) {
     const ws = new WebSocket(connectUrl, program.subprotocol, options);
 
     ws.on('open', () => {
-      if (program.execute) {
+      if (program.execute && program.execute.length > 0) {
         program.execute.forEach(cmd => ws.send(cmd));
         setTimeout(() => {
           ws.close();

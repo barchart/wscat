@@ -23,8 +23,14 @@ connected (press CTRL+C to quit)
 
 ## Chain Commands
 
+`-w {x}` will keep the connection open for {x} seconds.
+
 ```
-wscat -c wss://wsqs-e-barchart.aws.barchart.com/jerq -x "login user:pass" -x "ver 4" -x "go ZCBG19NCSC.CM"
+wscat -c wss://wsqs-e-barchart.aws.barchart.com/jerq \
+  -x "login user:pass" \
+  -x "ver 4" \
+  -x "go ZCBG19NCSC.CM" \
+  -w 10
 ```
 
 ## License
